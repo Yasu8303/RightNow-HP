@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>パーソナルジムRightNow | 今始めれば、未来が変わる！</title>
+  
+  <!-- ★★★Webフォント読み込み★★★ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- 外部ライブラリのCSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  
+  <!-- 独自のCSSファイルを読み込み -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- スクロール進行度インジケーター -->
+  <div class="scroll-indicator"></div>
+  
+  <!-- フローティングLINEボタン -->
+  <a href="https://lin.ee/Ql7VxyH" target="_blank" class="floating-line-btn">
+    <svg viewBox="0 0 32 32" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M25.8667 4.17778C23.0222 1.6 19.5556 0 16 0C7.11111 0 0 6.31111 0 14.0444C0 17.0667 0.977778 19.8222 2.75556 22.0444L2.4 29.6889C2.4 30.2222 2.66667 30.6667 3.2 30.9333C3.46667 31.0222 3.73333 31.0222 4 31.0222C4.35556 31.0222 4.71111 30.9333 4.97778 30.6667L11.9111 24.6222C13.2444 25.1556 14.6667 25.4222 16.1778 25.4222H16.2667C25.1556 25.4222 32 19.1111 32 11.3778C32 8.44444 30.9333 5.86667 29.1556 3.73333L29.0667 3.64444L25.8667 4.17778ZM11.0222 17.6889H8.44444V12.1778H11.0222V17.6889ZM19.8222 17.6889H17.2444V12.1778H19.8222V17.6889ZM25.0667 10.4889C25.0667 10.8444 24.8 11.1111 24.4444 11.1111H22.4V14.4C22.4 15.6444 21.4222 16.6222 20.1778 16.6222H16.8889C15.6444 16.6222 14.6667 15.6444 14.6667 14.4V11.1111H12.6222C12.2667 11.1111 12 10.8444 12 10.4889V8.44444C12 8.08889 12.2667 7.82222 12.6222 7.82222H24.4444C24.8 7.82222 25.0667 8.08889 25.0667 8.44444V10.4889Z" /></svg>
+  </a>
+
+  <header class="header">
+    <a href="#" class="logo">
+      パーソナルジムRightNow
+      <span class="logo-subtitle">〜今始めれば、未来が変わる！〜</span>
+    </a>
+    <nav>
+        <ul class="nav-menu">
+            <li class="nav-item"><a href="#comfort-trust">RightNowの特長</a></li>
+            <li class="nav-item"><a href="#services">サービス・料金</a></li>
+            <li class="nav-item"><a href="#success-stories">お客様の声</a></li>
+            <li class="nav-item"><a href="#about-trainer">トレーナー</a></li>
+            <li class="nav-item"><a href="#facility-access">アクセス</a></li>
+            <li class="nav-item"><a href="#meal-plan-app" class="nav-special-link">食事プラン作成</a></li>
+            <li class="nav-item"><a href="#contact" class="cta-button">初回体験予約</a></li>
+        </ul>
+    </nav>
+    <button class="hamburger-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </button>
+  </header>
+
+  <main>
+    <!-- ヒーローセクション -->
+    <section class="hero" id="hero">
+      <div class="hero-content">
+        <h1 class="hero-title">あなたらしい理想の体づくりを<br>今ここから。</h1>
+        <p class="hero-subtitle">一人ひとりの「なりたい自分」に寄り添う<br><span class="text-accent">マンツーマン指導専門のパーソナルジム</span>です。</p>
+        <div class="hero-cta-group">
+            <a href="#contact" class="cta-button">初回体験を予約する</a>
+            <a href="#faq" class="cta-button secondary">無料カウンセリング</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 安心・信頼セクション -->
+    <section id="comfort-trust" class="fade-in-section">
+      <div class="section-container">
+        <h2 class="section-title">初めての方でも安心。<br>RightNowが選ばれる理由</h2>
+        <p class="section-subtitle">私たちは、誰もが安心してトレーニングを始められる環境づくりを大切にしています。</p>
+        <div class="card-grid">
+            <div class="card">
+                <h3>あなたと向き合うマンツーマン指導</h3>
+                <p>指導中はトレーナーがあなたに付きっきりでサポートします。周りを気にせず、フォームの確認やトレーニングの相談に集中できる環境です。</p>
+            </div>
+            <div class="card">
+                <h3>初心者でも大丈夫</h3>
+                <p>運動が苦手な方、ジムが初めての方も大歓迎です。あなたの体力レベルや目標に合わせた最適なプログラムをご提案します。</p>
+            </div>
+            <div class="card">
+                <h3>清潔で快適な設備</h3>
+                <p>トレーニングウェアで気軽にお越しください。清潔な更衣室、シャワールーム、ウォーターサーバーを完備しています。</p>
+            </div>
+             <div class="card">
+                <h3>豊富な資格を持つトレーナー</h3>
+                <p>解剖学や栄養学はもちろん、心理学にも精通した経験豊富なトレーナーが、あなたの目標達成まで責任を持ってサポートします。</p>
+            </div>
+             <div class="card">
+                <h3>心身のトータルサポート</h3>
+                <p>トレーニングを通じて得られるのは、引き締まった身体だけではありません。目標を達成する喜びや、自分を好きになる自信。身体だけでなく、心までポジティブに変えていくことをお約束します。</p>
+            </div>
+            <div class="card">
+                <h3>何でも話せる、相談しやすい関係性</h3>
+                <p>RightNowでは、ただトレーニングを教えるだけでなく、お客様一人ひとりと真摯に向き合います。身体の悩みはもちろん、日々のちょっとしたことまで、何でも話せるような信頼関係を大切にしています。</p>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- サービス紹介 -->
+    <section id="services" class="fade-in-section">
+      <div class="section-container">
+        <h2 class="section-title">あなたの目的に合わせた３つのプログラム</h2>
+        <div class="card-grid">
+          <div class="card">
+            <h3>パーソナルトレーニング</h3>
+            <p><strong>目標に合わせたオーダーメイド指導</strong><br>丁寧なカウンセリングで、ダイエット、筋力アップ、健康維持といった一人ひとりの目標を明確にして、<span class="text-accent">科学的根拠</span>に基づいたあなただけのプログラムで、理想の身体へとサポートします。</p>
+          </div>
+          <div class="card">
+            <h3>パーソナルボクシング</h3>
+            <p><strong>ストレス発散から本格指導まで</strong><br>全身を使う有酸素運動で、楽しみながら脂肪燃焼。<span class="text-accent">元プロボクサーのトレーナー</span>が、構えからパンチの打ち方まで本物の技術を楽しく指導。美しいフォームが身につけば、効果も見た目も格段に変わります。</p>
+          </div>
+          <div class="card">
+            <h3>ストレッチ・コンディショニング</h3>
+            <p><strong>心身を整える、疲労回復と柔軟性向上</strong><br>トレーニング後のケアはもちろん、デスクワークやスマホ操作で凝り固まった身体を、専門知識を持つトレーナーが丁寧にほぐします。マッサージとは違う、<span class="text-accent">根本原因にアプローチ</span>するコンディショニングで、軽やかな身体を取り戻しましょう。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- 料金プラン -->
+    <section id="pricing" class="fade-in-section">
+      <div class="section-container">
+        <h2 class="section-title">シンプルで分かりやすい料金プラン</h2>
+        <p class="section-subtitle">RightNowでは、皆様が安心してスタートできるよう、お得な料金プランをご用意しております。</p>
+        <table class="pricing-table">
+          <thead>
+            <tr>
+              <th>プラン</th>
+              <th>料金（税込）</th>
+              <th>内容・特長</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-label="プラン"><strong>初回体験</strong></td>
+              <td data-label="料金" class="price">¥3,300</td>
+              <td data-label="内容">カウンセリング込み60分。まずはお気軽にお試しください。</td>
+            </tr>
+            <tr class="admission-fee">
+              <td data-label="プラン"><strong>入会金</strong></td>
+              <td data-label="料金" class="price">¥5,500</td>
+              <td data-label="内容">
+                体験して1週間以内に入会された場合は<span class="campaign-note">０円！</span>
+              </td>
+            </tr>
+            <tr>
+              <td data-label="プラン">単発 (ビジター)</td>
+              <td data-label="料金" class="price">¥7,000 / 回</td>
+              <td data-label="内容">ご自身のペースで通いたい方におすすめ。</td>
+            </tr>
+            <tr>
+              <td data-label="プラン">4回パック</td>
+              <td data-label="料金" class="price">¥27,000 <small>(¥<span class="counter" data-target="1250">0</span>お得)</small></td>
+              <td data-label="内容">まずは1ヶ月試したい方に。 (¥6,750/回)</td>
+            </tr>
+            <tr class="recommended">
+              <td data-label="プラン"><strong>8回パック</strong></td>
+              <td data-label="料金" class="price">¥53,000 <small>(¥<span class="counter" data-target="3000">0</span>お得)</small></td>
+              <td data-label="内容">継続して続けていきたい方に。 (¥6,625/回)</td>
+            </tr>
+            <tr>
+              <td data-label="プラン">ストレッチ</td>
+              <td data-label="料金" class="price">¥3,000 (30分) / ¥4,000 (40分) /<br> ¥5,000 (60分)</td>
+              <td data-label="内容">疲れた身体のメンテナンスに。<br><span class="stretch-note">※30分コースはトレーニングとセットのみ可。</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 多様な成功事例 -->
+    <section id="success-stories" class="fade-in-section" style="background-color: var(--warm-gray-light);">
+      <div class="section-container">
+        <h2 class="section-title">たくさんの方が、理想の自分を実現しています</h2>
+        <div class="swiper-container success-stories-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="card">
+                        <h3>健康的<span class="text-accent">-<span class="counter" data-target="10">0</span>kg</span>達成！ (40代男性)</h3>
+                        <p>「無理な食事制限なく、週1回のトレーニングを継続。トレーナーの励ましのおかげで楽しく続けられ、気づけば身体が軽く、ズボンがブカブカになったのでスーツを買い直しました。健康診断の数値が激変しお医者さんに本当に本人か確認されました（笑）」</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <h3>脂肪が<span class="text-accent">-<span class="counter" data-target="4">0</span>kg</span>！ (30代女性)</h3>
+                        <p>「自己流ダイエットに限界を感じて入会。的確な食事アドバイスで、たくさん食べてるはずなのに、気になっていたお腹周りがスッキリ！筋肉量が上がって脂肪が-4kg！周りからも「めっちゃ変わったよね！」と言われて嬉しかったです♡」</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <h3>肩こり・腰痛が楽に (50代女性)</h3>
+                        <p>「運動不足解消と体力向上を目的にスタート。初めは30分で立てなくなるくらい体力がなかったのに、ストレッチと軽いトレーニングを続けるうちに、今では60分がっつり追い込んでいただけています。身体の不調もいつのまにかすっかり改善され、毎日を元気に過ごせています。」</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <h3>ボクシングが最高のストレス発散に！ (20代男性)</h3>
+                        <p>「就職活動のストレス解消のために入会しました。ミットに打ち込む時間は無心になれて最高です。体力もつき、自分に自信が持てるようになりました！」</p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- トレーナー紹介 -->
+    <section id="about-trainer" class="fade-in-section">
+      <div class="section-container">
+        <h2 class="section-title">トレーナー紹介</h2>
+        <div class="trainer-profile">
+            <div class="trainer-photo-area">
+                <img src="images/trainer_photo.png" alt="トレーナー 福嶋 康誠 (Yasumasa Fukushima)" class="trainer-photo">
+            </div>
+            <div class="trainer-details-area">
+                <h3>福嶋 康誠 (Yasumasa Fukushima)</h3>
+                <p class="trainer-message">「<span class="text-accent">大手パーソナルジム</span>や<span class="text-accent">ストレッチ専門店</span>で経験を積み、博多協栄ジムの<span class="text-accent">元プロボクサー</span>から現トレーナーへ。その経験を活かし、一人ひとりの『なりたい自分』に、本気で寄り添います。<br>運動が苦手な方、一歩踏み出せないでいる方も、まずは気軽にお悩みをお聞かせください。<br><span class="highlight-phrase">『今始めれば、未来は変わる！』</span>その第一歩を、私が全力でサポートします。」</p>
+                <h4 class="qualifications-title">保有資格</h4>
+                <ul class="qualifications">
+                    <li>NESTA PFT パーソナルトレーナー</li>
+                    <li>NESTAボディメイキングスペシャリスト</li>
+                    <li>NESTAダイエット＆ビューティースペシャリスト</li>
+                    <li>NESTA HIITスペシャリスト</li>
+                    <li>NESTA ファンクショナルアナトミースペシャリスト</li>
+                    <li>FTPベーシックマットピラティスインストラクター</li>
+                    <li>日本ボクシングコミッション認定ボクサーライセンス</li>
+                    <li>日本ボクシングコミッション認定トレーナーライセンス</li>
+                    <li>上級心理カウンセラー</li>
+                </ul>
+            </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- FAQ -->
+    <section id="faq" class="fade-in-section">
+      <div class="section-container">
+        <h2 class="section-title">よくあるご質問</h2>
+        <div class="faq-container">
+          <div class="faq-item">
+            <button class="faq-question">運動が全くの初心者でも大丈夫ですか？</button>
+            <div class="faq-answer"><p>もちろんです。多くのお客様が運動未経験からスタートされています。お客様一人ひとりの体力レベルに合わせて丁寧に指導しますので、ご安心ください。</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">どんな服装で来ればいいですか？</button>
+            <div class="faq-answer"><p>動きやすい服装（Tシャツ、スウェットなど）と室内用シューズ、タオル、飲み物をご持参ください。ウェアのレンタルはございませんが、お水はウォーターサーバーをご利用いただけます。</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">無理な勧誘はありませんか？</button>
+            <div class="faq-answer"><p>一切ございません。初回体験後、ご納得いただいた上でご入会をご検討いただければと思います。安心してお越しください。</p></div>
+          </div>
+           <div class="faq-item">
+            <button class="faq-question">食事指導もしてもらえますか？</button>
+            <div class="faq-answer"><p>はい、ご希望に応じて食事に関するアドバイスも行っています。ただし、お客様の健康を第一に考えているため、短期間で大幅な体重を減らすような極端な食事指導はお断りする場合がございます。無理な制限ではなく、ライフスタイルに合わせた継続可能な食事プランを一緒に考えていきましょう。</p></div>
+           </div>
+           <div class="faq-item">
+            <button class="faq-question">支払い方法には何がありますか？</button>
+            <div class="faq-answer"><p>現金、または銀行振り込み、paypayをご利用いただけます。ご希望のお支払い方法をお選びください。</p></div>
+           </div>
+           <div class="faq-item">
+            <button class="faq-question">予約の変更・キャンセルは可能ですか？</button>
+            <div class="faq-answer"><p>はい、可能です。ご予約日の前日までにご連絡いただければ、無料で変更・キャンセルを承ります。ただし、ご予約当日の変更・キャンセルはチケット1回分の消化となりますので、あらかじめご了承ください。</p></div>
+           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 施設・アクセス -->
+    <section id="facility-access" class="fade-in-section">
+        <div class="section-container">
+            <h2 class="section-title">施設・アクセス</h2>
+            <div class="facility-grid">
+                <div class="facility-info">
+                    <h3>博多協栄ボクシングジム併設の<br>クリーンなトレーニング環境</h3>
+                    <p>清潔で明るい施設内には、トレーニングに必要な器具を完備。更衣室やシャワーもご利用いただけますので、お仕事帰りでも気軽にお立ち寄りください。</p>
+                    
+                    <div class="facility-notice">
+                        <h4>【ご利用に関するご案内】</h4>
+                        <p>当パーソナルジムは、博多協栄ボクシングジムに併設しております。<br>
+                           下記の博多協栄ボクシングジムの営業時間内は、ボクシングジム会員様も施設を利用されておりますので、あらかじめご了承ください。</p>
+                        <strong>▼博多協栄ボクシングジム 営業時間</strong>
+                        <ul>
+                            <li>平日：14:00〜23:00</li>
+                            <li>土曜：14:00〜20:00</li>
+                            <li>日曜：14:00〜18:00</li>
+                            <li>定休日：木曜・祝日</li>
+                        </ul>
+                    </div>
+
+                    <ul>
+                        <li><strong>ジム名:</strong> パーソナルジムRightNow (博多協栄ボクシングジム内)</li>
+                        <li><strong>住所:</strong> 〒815-0037 福岡市南区玉川町18-12-1F</li>
+                        <li>
+                            <strong>アクセス:</strong>
+                            <span>
+                                西鉄高宮駅から徒歩10分<br>
+                                西鉄大橋駅から徒歩15分
+                            </span>
+                        </li>
+                        <li><strong>営業時間:</strong> 10:00 - 21:00 (日曜定休)</li>
+                        <li><strong>設備:</strong> 更衣室・シャワー・ウォーターサーバー完備</li>
+                        <li><strong>駐車:</strong> 近隣のコインパーキングをご利用ください</li>
+                    </ul>
+                </div>
+                <div class="access-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3324.774431908271!2d130.41836131548805!3d33.55878148074311!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x354191196434a939%3A0x633514757c2a13f6!2z5Y2a5aSa5Y-k5qCE44Oc44Kt44K544Oz44Kw44K444Og!5e0!3m2!1sja!2sjp!4v1662444401736!5m2!1sja!2sjp" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+   <!-- ★★★ 食事プランニング・セクション（デザイン強化版） ここから ★★★ -->
+<section id="meal-plan-app" class="meal-plan-section">
+  <div class="section-container">
+    
+    <div class="meal-plan-content-wrapper">
+      <!-- (任意) アプリのイメージ画像などをここに置くと、さらに分かりやすくなります -->
+      <!-- <img src="images/app-mockup.png" alt="食事プランニングのイメージ" class="app-mockup-image"> -->
+
+      <div class="meal-plan-text-area">
+        <h2 class="section-title">プロトレーナー監修<br>自宅で完結 食事プランニング</h2>
+        <p class="section-subtitle">
+          RightNowのトレーナーが長年の指導経験と科学的根拠に基づき、あなたの目標とライフスタイルに合わせた最適な食事プランを提案します。スーパーで買える身近な食材だけで、無理なく続けられる健康的な食生活を始めませんか？
+        </p>
+    
+        <a href="https://diet-app-new.web.app" target="_blank" rel="noopener noreferrer" class="cta-button shiny-button">
+          さっそく無料で食事プランを試す
+        </a>
+    
+        <details class="service-accordion">
+          <summary>
+              <span class="accordion-title">初めての方へ：本サービスについて</span>
+              <span class="accordion-icon">+</span>
+          </summary>
+          <div class="accordion-content">
+              <p>
+                  本サービスは、お客様の年齢、目標、ライフスタイル等の情報に基づき、プロのトレーナーが監修した最適な食事プランを提案するものです。厚生労働省「日本人の食事摂取基準」等の科学的データを参照し、あなただけのプランを作成します。
+              </p>
+              <h3 class="accordion-content-title">ご提供プラン</h3>
+              <ul class="accordion-list">
+                  <li><strong>3日分の食事プラン:</strong> <s>¥4,980</s> → <strong>¥2,980</strong> (税込)</li>
+                  <li><strong>7日分の食事プラン:</strong> <s>¥9,980</s> → <strong>¥5,980</strong> (税込)</li>
+              </ul>
+          </div>
+        </details>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+    <!-- お問い合わせセクション -->
+    <section id="contact" class="fade-in-section">
+      <div class="section-container">
+        <h2 class="section-title">さあ、新しい自分をはじめよう</h2>
+        <p class="section-subtitle">まずは初回体験で、ジムの雰囲気やトレーナーとの相性を確かめてみませんか？<br>「私にできるかな？」そんな不安も、ぜひお気軽にご相談ください。</p>
+        
+        <div class="contact-methods">
+            <div class="contact-box">
+                <h3>メールでのお問い合わせ</h3>
+                <p>下記ボタンからメーラーを起動します。<br><b>お名前、体験希望日時（第3希望まで）、お問い合わせ内容</b><br>をご記入の上、送信してください。</p>
+                <a href="mailto:rightnow.personalgym@gmail.com?subject=初回体験・カウンセリングの予約&body=【お名前】%0d%0a%0d%0a【ご希望の日時】%0d%0a第1希望： %0d%0a第2希望： %0d%0a第3希望： %0d%0a%0d%0a【お問い合わせ内容】%0d%0a" class="cta-button">メールで予約する</a>
+            </div>
+            <div class="contact-box">
+                <h3>LINEでのお問い合わせ</h3>
+                <p>下記QRコードまたはボタンから「友だち追加」をして、<br>お気軽にご連絡ください。</p>
+                <img src="images/line_qr.png" alt="LINE QRコード" class="qr-code">
+                <a href="https://lin.ee/Ql7VxyH" target="_blank" class="line-button">LINEで予約する</a>
+            </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- フッター -->
+  <footer class="footer">
+      <a href="#" class="footer-logo">
+        パーソナルジムRightNow
+        <span class="footer-logo-subtitle">〜今始めれば、未来が変わる！〜</span>
+      </a>
+      <ul class="footer-links">
+        <li><a href="#comfort-trust">RightNowの特長</a></li>
+        <li><a href="#services">サービス・料金</a></li>
+        <li><a href="#success-stories">お客様の声</a></li>
+        <li><a href="#faq">よくある質問</a></li>
+        <li><a href="#" class="legal-link" data-modal-target="#tokushoho-content">特定商取引法</a></li>
+    <li><a href="#" class="legal-link" data-modal-target="#privacy-content">プライバシーポリシー</a></li>
+    <li><a href="#" class="legal-link" data-modal-target="#terms-content">利用規約</a></li>
+      </ul>
+      <p class="copyright">© 2025 パーソナルジムRightNow. All Rights Reserved.</p>
+  </footer>
+
+  <!-- 外部ライブラリのJavaScript -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  
+  <!-- 独自のJavaScriptファイルを読み込み -->
+  <script src="script.js"></script>
+
+</body>
+</html>
