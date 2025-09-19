@@ -838,26 +838,81 @@ section {
   }
 }
 
+/* style.css の末尾の meal-plan-section 関連をこちらに差し替え */
+
 /* =================================== */
-/* 12. 食事プランアプリ紹介セクション (デザイン強化版)
+/* 12. 食事プランアプリ紹介セクション (アピール強化版)
 /* =================================== */
 .meal-plan-section {
     padding: 80px 20px;
-    /* C案: 美しいグラデーション背景 */
     background: linear-gradient(135deg, rgba(74, 144, 226, 0.05), rgba(50, 205, 50, 0.05));
 }
 
 .meal-plan-section .section-container {
-    /* B案: セクションをリッチなカード化 */
-    max-width: 900px;
+    max-width: 1100px; /* 横幅を少し広げる */
     background: var(--white);
     border-radius: 20px;
-    padding: 50px 40px;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    padding: 60px 50px; /* 内側の余白を調整 */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* 2カラムレイアウトのための設定 */
+.meal-plan-content-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 50px; /* 画像とテキストの間隔 */
+    text-align: left;
+}
+
+.meal-plan-image-area {
+    flex: 0 0 45%; /* 左側の画像エリアの幅を45%に固定 */
+}
+
+.meal-plan-image-area img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.meal-plan-text-area {
+    flex: 1; /* 右側のテキストエリアが残りの幅をすべて使う */
 }
 
 .meal-plan-section .section-title {
-    font-size: 2.2rem;
+    font-size: 2.3rem;
+    text-align: left;
+}
+.meal-plan-section .section-title-sub {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--accent-green);
+    margin-bottom: 5px;
+}
+
+.meal-plan-section .section-subtitle {
+    text-align: left;
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 100%;
+}
+
+/* メリットリストのスタイル */
+.benefits-list {
+    list-style: none;
+    padding: 0;
+    margin: 30px 0;
+}
+.benefits-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+.benefits-list .benefit-icon {
+    font-size: 1.8rem;
+    line-height: 1.2;
 }
 
 /* ボタンのデザインをグラデーションに */
@@ -865,7 +920,16 @@ section {
     background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-green) 100%);
     position: relative;
     overflow: hidden;
-    margin-bottom: 30px;
+}
+.shiny-button:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(74, 144, 226, 0.2);
+}
+
+/* ボタンを中央揃えにするためのスタイル */
+.meal-plan-cta {
+    text-align: center;
+    margin-bottom: 30px; /* ボタンの下の余白をここに移動 */
 }
 
 /* ボタンにホバー時の輝きエフェクトを追加 */
@@ -887,13 +951,12 @@ section {
 
 /* アコーディオンのデザイン調整 */
 .meal-plan-section .service-accordion {
-    max-width: 700px;
-    margin: 0 auto;
+    max-width: 100%; /* 横幅を100%に */
+    margin: 0;
     text-align: left;
     border: 1px solid var(--warm-gray-medium);
     border-radius: 12px;
-    background-color: var(--white);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    background-color: var(--warm-gray-light);
 }
 
 .meal-plan-section .service-accordion summary {
@@ -927,6 +990,8 @@ section {
     padding: 0 25px 25px 25px;
     color: var(--text-light);
     line-height: 1.7;
+    background-color: var(--white);
+    border-radius: 0 0 12px 12px;
 }
 
 .meal-plan-section .service-accordion .accordion-content-title {
@@ -949,6 +1014,41 @@ section {
 .meal-plan-section .service-accordion .accordion-list s {
     color: #999;
     margin-right: 5px;
+}
+
+/* スマホ用の改行制御 */
+.sp-only { display: none; }
+
+/* レスポンシブ対応 */
+@media (max-width: 992px) {
+    .meal-plan-content-wrapper {
+        flex-direction: column; /* 992px以下で縦積みに変更 */
+    }
+    .meal-plan-image-area {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 450px; /* 画像が大きくなりすぎないように制御 */
+    }
+    .meal-plan-section .section-title,
+    .meal-plan-section .section-subtitle {
+        text-align: center; /* スマホでは中央揃えに */
+    }
+}
+
+@media (max-width: 768px) {
+    .meal-plan-section .section-container {
+        padding: 40px 25px;
+    }
+    .meal-plan-section .section-title {
+        font-size: 1.8rem;
+    }
+    .sp-only { display: block; } /* スマホで改行を有効化 */
+}
+
+/* ナビゲーションの食事プラン作成リンクのスタイルは変更なし */
+.nav-special-link {
+  color: var(--accent-green) !important;
+  font-weight: 700 !important;
 }
 
 /* レスポンシブ対応 */
