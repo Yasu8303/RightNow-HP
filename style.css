@@ -1,5 +1,3 @@
-/* --- CSSデザイン要素 --- */
-
 /* 上品で親しみやすいカラーパレット */
 :root {
   --primary-blue: #4A90E2;
@@ -838,8 +836,6 @@ section {
   }
 }
 
-/* style.css の末尾の meal-plan-section 関連をこちらに差し替え */
-
 /* =================================== */
 /* 12. 食事プランアプリ紹介セクション (アピール強化版)
 /* =================================== */
@@ -1048,21 +1044,5 @@ section {
 /* ナビゲーションの食事プラン作成リンクのスタイルは変更なし */
 .nav-special-link {
   color: var(--accent-green) !important;
-  font-weight: 700 !important;
-}
-
-/* レスポンシブ対応 */
-@media (max-width: 768px) {
-    .meal-plan-section .section-container {
-        padding: 40px 20px;
-    }
-    .meal-plan-section .section-title {
-        font-size: 1.8rem;
-    }
-}
-
-/* ナビゲーションの食事プラン作成リンク */
-.nav-special-link {
-  color: var(--accent-green) !important; /* 青から黄緑に変更 */
   font-weight: 700 !important;
 }
