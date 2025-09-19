@@ -728,6 +728,193 @@ section {
 }
 
 
+/* =================================== */
+/* 食事プランアプリ紹介セクション
+/* =================================== */
+.meal-plan-section {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, rgba(74, 144, 226, 0.05), rgba(50, 205, 50, 0.05));
+}
+
+.meal-plan-section .section-container {
+    max-width: 1100px;
+    background: var(--white);
+    border-radius: 20px;
+    padding: 50px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* セクション全体のメインタイトル */
+.meal-plan-main-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.meal-plan-main-title .section-title-sub {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--accent-green);
+    margin-bottom: 5px;
+}
+
+/* 2カラムレイアウトのための設定 */
+.meal-plan-content-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 50px;
+    text-align: left;
+}
+
+.meal-plan-image-area {
+    flex: 0 0 45%;
+}
+
+.meal-plan-image-area img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.meal-plan-text-area {
+    flex: 1;
+}
+
+.meal-plan-text-area .section-subtitle {
+    text-align: left;
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 100%;
+}
+
+/* メリットリストのスタイル */
+.benefits-list {
+    list-style: none;
+    padding: 0;
+    margin: 30px 0;
+}
+.benefits-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+.benefits-list .benefit-icon {
+    font-size: 1.8rem;
+    line-height: 1.2;
+}
+
+/* ボタンのデザインをグラデーションに */
+.shiny-button {
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-green) 100%);
+    position: relative;
+    overflow: hidden;
+}
+.shiny-button:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(74, 144, 226, 0.2);
+}
+
+/* ボタンを中央揃えにするためのスタイル */
+.meal-plan-cta {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* ボタンにホバー時の輝きエフェクトを追加 */
+.shiny-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    transition: transform 0.6s ease;
+}
+
+.shiny-button:hover::before {
+    transform: translateX(200%);
+}
+
+/* アコーディオンのデザイン調整 */
+.meal-plan-section .service-accordion {
+    max-width: 100%;
+    margin: 0;
+    text-align: left;
+    border: 1px solid var(--warm-gray-medium);
+    border-radius: 12px;
+    background-color: var(--warm-gray-light);
+}
+
+.meal-plan-section .service-accordion summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--deep-navy);
+    cursor: pointer;
+    list-style: none;
+}
+
+.meal-plan-section .service-accordion summary::-webkit-details-marker {
+    display: none;
+}
+
+.meal-plan-section .service-accordion .accordion-icon {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: var(--primary-blue);
+    transition: transform 0.3s ease;
+}
+
+.meal-plan-section .service-accordion[open] > summary .accordion-icon {
+    transform: rotate(45deg);
+}
+
+.meal-plan-section .service-accordion .accordion-content {
+    padding: 0 25px 25px 25px;
+    color: var(--text-light);
+    line-height: 1.7;
+    background-color: var(--white);
+    border-radius: 0 0 12px 12px;
+}
+
+.meal-plan-section .service-accordion .accordion-content-title {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    color: var(--primary-blue);
+    border-bottom: 1px solid var(--warm-gray-medium);
+    padding-bottom: 5px;
+}
+
+.meal-plan-section .service-accordion .accordion-list {
+    list-style-type: '✓ ';
+    padding-left: 20px;
+}
+
+.meal-plan-section .service-accordion .accordion-list li {
+    margin-bottom: 5px;
+}
+.meal-plan-section .service-accordion .accordion-list s {
+    color: #999;
+    margin-right: 5px;
+}
+
+/* スマホ用の改行制御 */
+.sp-only { display: none; }
+
+/* ナビゲーションの食事プラン作成リンク */
+.nav-special-link {
+  color: var(--accent-green) !important;
+  font-weight: 700 !important;
+}
+
+
 /* --- レスポンシブ対応 --- */
 @media (max-width: 992px) {
     .trainer-profile {
@@ -745,7 +932,22 @@ section {
         order: -1; 
         margin-bottom: 30px;
     }
+
+    /* 食事プランセクション */
+    .meal-plan-content-wrapper {
+        flex-direction: column;
+    }
+    .meal-plan-image-area {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 450px;
+    }
+    .meal-plan-main-title,
+    .meal-plan-text-area .section-subtitle {
+        text-align: center;
+    }
 }
+
 @media (max-width: 768px) {
   .section-title {
     font-size: 2rem;
@@ -834,215 +1036,15 @@ section {
   .facility-gallery {
     grid-template-columns: 1fr;
   }
-}
 
-/* =================================== */
-/* 12. 食事プランアプリ紹介セクション (アピール強化版)
-/* =================================== */
-.meal-plan-section {
-    padding: 80px 20px;
-    background: linear-gradient(135deg, rgba(74, 144, 226, 0.05), rgba(50, 205, 50, 0.05));
-}
-
-.meal-plan-section .section-container {
-    max-width: 1100px; /* 横幅を少し広げる */
-    background: var(--white);
-    border-radius: 20px;
-    padding: 60px 50px; /* 内側の余白を調整 */
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
-}
-
-/* 2カラムレイアウトのための設定 */
-.meal-plan-content-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 50px; /* 画像とテキストの間隔 */
-    text-align: left;
-}
-
-.meal-plan-image-area {
-    flex: 0 0 45%; /* 左側の画像エリアの幅を45%に固定 */
-}
-
-.meal-plan-image-area img {
-    width: 100%;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-}
-
-.meal-plan-text-area {
-    flex: 1; /* 右側のテキストエリアが残りの幅をすべて使う */
-}
-
-.meal-plan-section .section-title {
-    font-size: 2.3rem;
-    text-align: left;
-}
-.meal-plan-section .section-title-sub {
-    display: block;
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: var(--accent-green);
-    margin-bottom: 5px;
-}
-
-.meal-plan-section .section-subtitle {
-    text-align: left;
-    margin-left: 0;
-    margin-right: 0;
-    max-width: 100%;
-}
-
-/* メリットリストのスタイル */
-.benefits-list {
-    list-style: none;
-    padding: 0;
-    margin: 30px 0;
-}
-.benefits-list li {
-    display: flex;
-    align-items: flex-start;
-    gap: 15px;
-    margin-bottom: 20px;
-    font-size: 1rem;
-}
-.benefits-list .benefit-icon {
-    font-size: 1.8rem;
-    line-height: 1.2;
-}
-
-/* ボタンのデザインをグラデーションに */
-.shiny-button {
-    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-green) 100%);
-    position: relative;
-    overflow: hidden;
-}
-.shiny-button:hover {
-    transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 8px 25px rgba(74, 144, 226, 0.2);
-}
-
-/* ボタンを中央揃えにするためのスタイル */
-.meal-plan-cta {
-    text-align: center;
-    margin-bottom: 30px; /* ボタンの下の余白をここに移動 */
-}
-
-/* ボタンにホバー時の輝きエフェクトを追加 */
-.shiny-button::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
-    transition: transform 0.6s ease;
-}
-
-.shiny-button:hover::before {
-    transform: translateX(200%);
-}
-
-
-/* アコーディオンのデザイン調整 */
-.meal-plan-section .service-accordion {
-    max-width: 100%; /* 横幅を100%に */
-    margin: 0;
-    text-align: left;
-    border: 1px solid var(--warm-gray-medium);
-    border-radius: 12px;
-    background-color: var(--warm-gray-light);
-}
-
-.meal-plan-section .service-accordion summary {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: var(--deep-navy);
-    cursor: pointer;
-    list-style: none; /* Safariの矢印を非表示 */
-}
-
-.meal-plan-section .service-accordion summary::-webkit-details-marker {
-    display: none; /* Chrome/Edgeの矢印を非表示 */
-}
-
-.meal-plan-section .service-accordion .accordion-icon {
-    font-size: 1.8rem;
-    font-weight: 400;
-    color: var(--primary-blue);
-    transition: transform 0.3s ease;
-}
-
-.meal-plan-section .service-accordion[open] > summary .accordion-icon {
-    transform: rotate(45deg);
-}
-
-.meal-plan-section .service-accordion .accordion-content {
-    padding: 0 25px 25px 25px;
-    color: var(--text-light);
-    line-height: 1.7;
-    background-color: var(--white);
-    border-radius: 0 0 12px 12px;
-}
-
-.meal-plan-section .service-accordion .accordion-content-title {
-    margin-top: 15px;
-    margin-bottom: 10px;
-    font-size: 1.1em;
-    color: var(--primary-blue);
-    border-bottom: 1px solid var(--warm-gray-medium);
-    padding-bottom: 5px;
-}
-
-.meal-plan-section .service-accordion .accordion-list {
-    list-style-type: '✓ ';
-    padding-left: 20px;
-}
-
-.meal-plan-section .service-accordion .accordion-list li {
-    margin-bottom: 5px;
-}
-.meal-plan-section .service-accordion .accordion-list s {
-    color: #999;
-    margin-right: 5px;
-}
-
-/* スマホ用の改行制御 */
-.sp-only { display: none; }
-
-/* レスポンシブ対応 */
-@media (max-width: 992px) {
-    .meal-plan-content-wrapper {
-        flex-direction: column; /* 992px以下で縦積みに変更 */
-    }
-    .meal-plan-image-area {
-        flex: 0 0 auto;
-        width: 100%;
-        max-width: 450px; /* 画像が大きくなりすぎないように制御 */
-    }
-    .meal-plan-section .section-title,
-    .meal-plan-section .section-subtitle {
-        text-align: center; /* スマホでは中央揃えに */
-    }
-}
-
-@media (max-width: 768px) {
-    .meal-plan-section .section-container {
-        padding: 40px 25px;
-    }
-    .meal-plan-section .section-title {
-        font-size: 1.8rem;
-    }
-    .sp-only { display: block; } /* スマホで改行を有効化 */
-}
-
-/* ナビゲーションの食事プラン作成リンクのスタイルは変更なし */
-.nav-special-link {
-  color: var(--accent-green) !important;
-  font-weight: 700 !important;
+  /* 食事プランセクション */
+  .meal-plan-section .section-container {
+      padding: 40px 25px;
+  }
+  .meal-plan-main-title.section-title {
+      font-size: 1.8rem;
+  }
+  .sp-only { 
+      display: block; 
+  }
 }
