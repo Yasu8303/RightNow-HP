@@ -343,6 +343,13 @@ section {
     color: var(--primary-blue);
 }
 
+.pricing-table .stretch-price {
+    margin-right: 8px;
+}
+.pricing-table .stretch-price:last-child {
+    margin-right: 0;
+}
+
 .pricing-table .recommended {
     font-weight: bold;
     background-color: rgba(135, 206, 235, 0.3);
@@ -750,6 +757,18 @@ section {
     margin-bottom: 40px;
 }
 
+.new-plan-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-green) 100%);
+    color: var(--white);
+    font-size: 1.6rem;
+    font-weight: 700;
+    padding: 10px 30px;
+    border-radius: 50px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
 .meal-plan-main-title .section-title-sub {
     display: block;
     font-size: 1.5rem;
@@ -921,6 +940,11 @@ section {
         flex-direction: column;
         text-align: center;
     }
+    .qualifications {
+        display: inline-block;
+        text-align: left;
+    }
+
     .facility-grid {
         grid-template-columns: 1fr;
         text-align: center;
@@ -952,9 +976,16 @@ section {
   .section-title {
     font-size: 2rem;
   }
+
+  /* ① ヒーローセクションの縦幅を調整 */
+  .hero {
+      padding-top: 140px;
+      padding-bottom: 80px;
+  }
   .hero-title {
     font-size: 2.5rem;
   }
+
   .header {
     align-items: center;
     padding: 10px 20px;
@@ -1022,7 +1053,15 @@ section {
       padding-left: 50%;
       text-align: right;
       border: none;
+      /* ② 料金プランの縦幅を調整 */
+      padding-top: 15px;
+      padding-bottom: 15px;
   }
+  /* ④ 「内容」のテキストを左寄せに */
+  .pricing-table td[data-label="内容"] {
+      text-align: left;
+  }
+
   .pricing-table td::before {
       content: attr(data-label);
       position: absolute;
@@ -1032,10 +1071,27 @@ section {
       font-weight: bold;
       color: var(--deep-navy);
   }
+  /* ③ ストレッチ料金を縦に表示 */
+  .pricing-table .stretch-price {
+      display: block;
+      text-align: right;
+      white-space: nowrap;
+  }
+
 
   .facility-gallery {
     grid-template-columns: 1fr;
   }
+  /* ⑥ 施設・アクセス欄の表示を調整 */
+  #facility-access .facility-info li {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 15px;
+  }
+  #facility-access .facility-info li strong {
+      margin-bottom: 5px;
+  }
+
 
   /* 食事プランセクション */
   .meal-plan-section .section-container {
@@ -1046,5 +1102,12 @@ section {
   }
   .sp-only { 
       display: block; 
+  }
+  /* ⑦ メリットリストの表示を調整 */
+  .benefits-list li {
+      align-items: flex-start;
+  }
+  .benefits-list .benefit-text strong {
+      display: block;
   }
 }
