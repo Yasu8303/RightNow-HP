@@ -101,7 +101,6 @@ section {
 
 /* ★★★ロゴデザイン最終修正★★★ */
 .logo {
-  /* ★フォントを明朝体に指定 */
   font-family: 'Noto Serif JP', serif;
   font-size: 1.6rem;
   font-weight: 700;
@@ -116,7 +115,6 @@ section {
 }
 
 .logo-subtitle {
-  /* ★フォントを明朝体に指定 */
   font-family: 'Noto Serif JP', serif;
   display: block;
   font-size: 0.9rem;
@@ -600,45 +598,76 @@ section {
 
 /* お問い合わせセクション */
 #contact {
-    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    background-color: var(--deep-navy);
+    color: var(--white);
+    padding: 80px 20px 60px;
+}
+
+.contact-main-title {
+    text-align: center;
+    margin-bottom: 40px;
     color: var(--white);
 }
 
-#contact .section-title, #contact .section-subtitle {
+.contact-wrapper {
+    display: flex;
+    align-items: stretch; /* ② これで下部が揃う */
+    gap: 50px;
+}
+
+.contact-image-area {
+    flex: 0 0 40%;
+}
+.contact-image-area img {
+    width: 100%;
+    height: 100%; /* ② 高さを親要素に合わせる */
+    object-fit: cover; /* ② アスペクト比を維持 */
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.contact-text-area {
+    flex: 1;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+#contact .section-subtitle {
+    text-align: left;
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 100%;
     color: var(--white);
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
 }
-#contact .section-title::after {
-    background: linear-gradient(90deg, var(--white), var(--light-blue));
-}
-
 
 .contact-methods {
     display: flex;
-    gap: 30px;
-    margin-top: 40px;
-    text-align: center;
+    gap: 20px;
+    margin-top: auto;
     align-items: stretch; 
     flex-wrap: wrap;
 }
 .contact-box {
     flex: 1;
-    min-width: 280px;
+    min-width: 250px;
     display: flex; 
     flex-direction: column; 
     justify-content: space-between; 
-    padding: 30px;
-    background-color: var(--white);
+    padding: 25px;
+    background-color: rgba(255,255,255, 0.05);
+    border: 1px solid rgba(255,255,255, 0.1);
     border-radius: 15px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-    color: var(--text-dark);
+    box-shadow: none;
+    color: var(--warm-gray-light);
 }
 .contact-box h3 {
-    color: var(--deep-navy);
+    color: var(--white);
     margin-bottom: 15px;
 }
 .contact-box .qr-code {
-    max-width: 180px;
+    max-width: 150px;
     margin: 15px auto;
 }
 .line-button {
@@ -751,7 +780,6 @@ section {
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
 }
 
-/* セクション全体のメインタイトル */
 .meal-plan-main-title {
     text-align: center;
     margin-bottom: 40px;
@@ -777,7 +805,6 @@ section {
     margin-bottom: 5px;
 }
 
-/* 2カラムレイアウトのための設定 */
 .meal-plan-content-wrapper {
     display: flex;
     align-items: flex-start;
@@ -806,7 +833,6 @@ section {
     max-width: 100%;
 }
 
-/* メリットリストのスタイル */
 .benefits-list {
     list-style: none;
     padding: 0;
@@ -824,7 +850,6 @@ section {
     line-height: 1.2;
 }
 
-/* ボタンのデザインをグラデーションに */
 .shiny-button {
     background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-green) 100%);
     position: relative;
@@ -835,13 +860,11 @@ section {
     box-shadow: 0 8px 25px rgba(74, 144, 226, 0.2);
 }
 
-/* ボタンを中央揃えにするためのスタイル */
 .meal-plan-cta {
     text-align: center;
     margin-bottom: 30px;
 }
 
-/* ボタンにホバー時の輝きエフェクトを追加 */
 .shiny-button::before {
     content: '';
     position: absolute;
@@ -857,7 +880,6 @@ section {
     transform: translateX(200%);
 }
 
-/* アコーディオンのデザイン調整 */
 .meal-plan-section .service-accordion {
     max-width: 100%;
     margin: 0;
@@ -924,10 +946,8 @@ section {
     margin-right: 5px;
 }
 
-/* スマホ用の改行制御 */
 .sp-only { display: none; }
 
-/* ナビゲーションの食事プラン作成リンク */
 .nav-special-link {
   color: var(--accent-green) !important;
   font-weight: 700 !important;
@@ -957,7 +977,17 @@ section {
         margin-bottom: 30px;
     }
 
-    /* 食事プランセクション */
+    .contact-wrapper {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .contact-main-title {
+        text-align: center;
+    }
+    .contact-text-area {
+        text-align: center;
+    }
+    
     .meal-plan-content-wrapper {
         flex-direction: column;
     }
@@ -977,7 +1007,6 @@ section {
     font-size: 2rem;
   }
 
-  /* ① ヒーローセクションの縦幅を調整 */
   .hero {
       padding-top: 140px;
       padding-bottom: 80px;
@@ -992,8 +1021,8 @@ section {
   }
   .logo {
       font-size: 1.2rem;
-      text-align: left;
   }
+  /* ① モバイル版ロゴのサブタイトルを中央揃えに */
   .logo-subtitle {
       font-size: 0.7rem;
   }
@@ -1053,11 +1082,9 @@ section {
       padding-left: 50%;
       text-align: right;
       border: none;
-      /* ② 料金プランの縦幅を調整 */
       padding-top: 15px;
       padding-bottom: 15px;
   }
-  /* ④ 「内容」のテキストを左寄せに */
   .pricing-table td[data-label="内容"] {
       text-align: left;
   }
@@ -1071,18 +1098,15 @@ section {
       font-weight: bold;
       color: var(--deep-navy);
   }
-  /* ③ ストレッチ料金を縦に表示 */
   .pricing-table .stretch-price {
       display: block;
       text-align: right;
       white-space: nowrap;
   }
 
-
   .facility-gallery {
     grid-template-columns: 1fr;
   }
-  /* ⑥ 施設・アクセス欄の表示を調整 */
   #facility-access .facility-info li {
       flex-direction: column;
       align-items: flex-start;
@@ -1092,10 +1116,13 @@ section {
       margin-bottom: 5px;
   }
 
-
   /* 食事プランセクション */
   .meal-plan-section .section-container {
       padding: 40px 25px;
+  }
+  .new-plan-badge {
+      font-size: 1.1rem;
+      padding: 6px 20px;
   }
   .meal-plan-main-title.section-title {
       font-size: 1.8rem;
@@ -1103,11 +1130,19 @@ section {
   .sp-only { 
       display: block; 
   }
-  /* ⑦ メリットリストの表示を調整 */
   .benefits-list li {
       align-items: flex-start;
   }
   .benefits-list .benefit-text strong {
       display: block;
+  }
+  .meal-plan-section .service-accordion summary {
+      font-size: 0.95rem; /* ① 文字サイズ微調整 */
+      padding: 15px 12px;
+  }
+
+  #contact .contact-main-title,
+  #contact .section-subtitle {
+      text-align: center;
   }
 }
